@@ -1,0 +1,5 @@
+package-as: OOF_Kill
+
+ignore:
+    - localdeploy.ps1
+    - README.md
