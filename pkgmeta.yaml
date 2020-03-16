@@ -1,5 +1,8 @@
 package-as: OOF_Kill
 
+move-folders:
+    OOF_Kill/OOF_Kill: OOF_Kill
+
 ignore:
     - localdeploy.ps1
     - README.md
