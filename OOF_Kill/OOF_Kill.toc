@@ -1,0 +1,6 @@
+## Interface: 80300
+## Title: Oof Kill Sound
+## Author: Furiedsteel
+## Version: 1.0
+
+OOF.lua
