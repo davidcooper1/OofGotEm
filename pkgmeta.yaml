@@ -6,3 +6,5 @@ move-folders:
 ignore:
     - localdeploy.ps1
     - README.md
+
+manual-changelog: CHANGELOG.txt

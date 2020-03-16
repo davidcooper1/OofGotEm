@@ -1,0 +1,7 @@
+Changes:
+
+v1.1:
+	- Added support for BFA.
+
+v1.1.1:
+	- Added pet kill sounds.

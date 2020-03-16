@@ -1,15 +1,23 @@
 local EventFrame = CreateFrame("Frame");
 EventFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
+EventFrame:RegisterEvent("COMBAT_LOG_EVENT");
 EventFrame:RegisterEvent("PLAYER_DEAD");
 
 local oofCount = 0;
 
 function EventFrame:OnEvent(event, ...)
 	if event == "COMBAT_LOG_EVENT_UNFILTERED" then
-		local eventPayload = CombatLogGetCurrentEventInfo();
-		local _, eventType, _, sourceGUID, _, _, _, _, destinationName = CombatLogGetCurrentEventInfo();
+		local _, eventType, _, sourceGUID, _, _, _, _, destinationName, _, _, _, swingOverkill, _, _, spellOverkill = CombatLogGetCurrentEventInfo();
 		if eventType == "PARTY_KILL" then
 			if sourceGUID == UnitGUID("player") then
+				OofKill_QueueSound(0);
+			end
+		elseif eventType == "SPELL_DAMAGE" then
+			if sourceGUID == UnitGUID("pet") and spellOverkill ~= nil and spellOverkill >= 0 then
+				OofKill_QueueSound(0);
+			end
+		elseif eventType == "SWING_DAMAGE" then
+			if sourceGUID == UnitGUID("pet") and swingOverkill ~= nil and swingOverkill >= 0 then
 				OofKill_QueueSound(0);
 			end
 		end
