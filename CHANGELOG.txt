@@ -1,5 +1,8 @@
 Changes:
 
+v2.0.0:
+	- Added option to change sound channel in interface options.
+
 v1.1.1:
 	- Added pet kill sounds.
 

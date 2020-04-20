@@ -6,5 +6,6 @@ move-folders:
 ignore:
     - localdeploy.ps1
     - README.md
+    - UI.xsd
 
 manual-changelog: CHANGELOG.txt
