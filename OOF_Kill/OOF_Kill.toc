@@ -2,5 +2,7 @@
 ## Title: Oof Kill Sound
 ## Author: Furiedsteel
 ## Version: 1.1.1
+## SavedVariables: OofKill_Settings, OofKill_Previous_Version
 
+OOF.xml
 OOF.lua
